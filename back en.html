@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menú con Título</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  /* Título fijo arriba */
+  header {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 100;
+  }
+
+  header h1 {
+    font-size: 3rem;
+    color: #ffd700;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 0 #ff4b2b, 4px 4px 0 rgba(0,0,0,0.3);
+    margin: 0;
+  }
+
+  /* Contenedor central de botones */
+  .menu-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+  }
+
+  .menu-button {
+    background-color: rgba(255,255,255,0.1);
+    border: 2px solid #ffd700;
+    border-radius: 15px;
+    padding: 30px 60px;
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s, background 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .menu-button img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+  }
+
+  .menu-button:hover {
+    transform: scale(1.1);
+    background-color: rgba(255,255,255,0.2);
+  }
+
+  @media (max-width: 600px) {
+    .menu-button {
+      padding: 20px 40px;
+      font-size: 1.5rem;
+    }
+
+    .menu-button img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Mi Sitio Principal</h1>
+</header>
+
+<div class="menu-container">
+  <a href="back1.html" class="menu-button">
+    <img src="https://img.icons8.com/ios-filled/100/ffd700/wallet.png" alt="Pagos">
+    Pagos
+  </a>
+  <a href="back2.html" class="menu-button">
+    <img src="https://img.icons8.com/ios-filled/100/ffd700/money-bag.png" alt="Depósitos">
+    Depósitos
+    
+  </a>
+</div>
+
+
+</body>
+</html>
